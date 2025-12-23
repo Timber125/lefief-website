@@ -1,0 +1,123 @@
+Lefief brand foundations
+Brand position
+
+Lefief feels like: reliable engineering + elegant delivery.
+Keywords: precise, calm, secure, modern, human.
+
+Naming
+
+Primary: Lefief
+
+Extended: Lefief-Powered-Solutions
+
+Style: use Title Case for product pages (“Lefief Platform”), lowercase only in URLs/handles.
+
+Visual identity
+Color system
+
+Use a crisp tech palette with a distinctive accent.
+
+Core
+
+Midnight (primary ink): #0B1220
+
+Lefief Blue (brand accent): #2F6BFF
+
+Cyan Lift (secondary accent): #14B8D6
+
+Cloud (surface): #F6F8FC
+
+Line (borders): #E5EAF3
+
+Semantic
+
+Success: #16A34A
+
+Warning: #F59E0B
+
+Danger: #EF4444
+
+Info: #0EA5E9
+
+Usage rules:
+
+Text on light: Midnight at 90–100% opacity.
+
+Links & primary actions: Lefief Blue.
+
+Use Cyan Lift sparingly for highlights, charts, or “new” moments.
+
+Typography
+
+System-first (fast, native) with an optional upgrade:
+
+Default stack: ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif
+
+Code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+Scale (recommended):
+
+H1 40/48, H2 32/40, H3 24/32, Body 16/24, Small 14/20
+
+Tone: medium weight headings, high legibility body.
+
+Layout & spacing
+
+Grid: 12-col (desktop), 8-col (tablet), 4-col (mobile)
+
+Max content width: 1120px
+
+Spacing unit: 8px (so 8/16/24/32/40…)
+
+Corner radius: 14px (cards), 10px (inputs/buttons)
+
+Elevation (shadows)
+
+Subtle, not “floaty”.
+
+Prefer borders + gentle shadow.
+
+UI components rules
+Buttons
+
+Primary: solid Lefief Blue + white text
+
+Secondary: soft tinted background
+
+Tertiary: text button
+
+Focus states: visible outline (accessibility)
+
+Forms
+
+Inputs: light surface, clear border, strong focus ring
+
+Error: border + helper text (don’t rely on color alone)
+
+Cards
+
+Use for grouping features, pricing, settings sections
+
+Padding: 20–28px
+
+Titles short, supporting text in muted color
+
+Tables
+
+Header row with subtle background
+
+Zebra rows only if data-heavy
+
+Icons
+
+Simple outline style (Lucide-like). Keep stroke consistent.
+
+Voice & microcopy
+
+Headings: outcome-driven (“Ship faster, safely.”)
+
+Body: short sentences, active voice.
+
+Avoid hype; prefer proof (“99.9% uptime”, “SOC2-ready”, etc.) when you have it.
+
+CTA verbs: Deploy, Integrate, Automate, Monitor, Launch
