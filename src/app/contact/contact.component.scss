@@ -1,0 +1,126 @@
+/* Contact Component Styles */
+
+.contact-section {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/* Subtle background glowing orb effect */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(47, 107, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
+    background: linear-gradient(135deg, var(--lf-text) 0%, var(--lf-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-info p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+.contact-form-wrapper {
+    position: relative;
+}
+
+/* Form Card Styling */
+form.card {
+    padding: 2.5rem;
+    background: var(--lf-surface);
+    /* Glass-like effect mostly visible on dark mode or complex backgrounds, 
+     but here adds a subtle depth on standard backgrounds */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(229, 234, 243, 0.6);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.02),
+        0 20px 40px -4px rgba(47, 107, 255, 0.08);
+    /* Brand-tinted shadow */
+    transition: transform 0.3s var(--lf-ease), box-shadow 0.3s var(--lf-ease);
+}
+
+form.card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.02),
+        0 30px 60px -8px rgba(47, 107, 255, 0.12);
+}
+
+/* Input Styling Enhancements */
+.label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+    color: var(--lf-text);
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+    background: var(--lf-surface-2);
+    /* Slightly darker/different than card bg */
+    border: 1px solid transparent;
+    /* Cleaner look initially */
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    padding: 14px 16px;
+}
+
+.input:hover,
+.textarea:hover {
+    background: var(--lf-surface);
+    border-color: var(--lf-line);
+}
+
+.input:focus,
+.textarea:focus {
+    background: var(--lf-surface);
+    border-color: var(--lf-brand);
+    box-shadow: 0 0 0 4px rgba(47, 107, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Button enhancements */
+.btn--primary {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    background: linear-gradient(135deg, var(--lf-brand), #255BE6);
+}
+
+.btn--primary:hover {
+    box-shadow: 0 12px 24px rgba(47, 107, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    form.card {
+        padding: 1.5rem;
+    }
+}

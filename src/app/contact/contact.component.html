@@ -1,0 +1,76 @@
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="hr"></div>
+
+        <div class="grid grid-2">
+            <div class="contact-info">
+                <h2>Get in touch</h2>
+                <p class="muted">
+                    Ready to elevate your digital infrastructure? Let's discuss how we can power your next project.
+                </p>
+
+                <div class="spacer-2"></div>
+
+                <div class="stack">
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form (submit)="sendEmail($event)" class="card stack">
+
+                    <!-- Honeypot Field (Hidden) -->
+                    <div style="display: none;">
+                        <label for="honey">Leave this field empty</label>
+                        <input type="text" id="honey" name="honey" [(ngModel)]="formData.honey">
+                    </div>
+
+                    <div class="field">
+                        <label for="name" class="label">Name</label>
+                        <input type="text" id="name" name="name" class="input" [(ngModel)]="formData.name" required
+                            placeholder="Your Name" [disabled]="status === 'sending'">
+                    </div>
+
+                    <div class="field">
+                        <label for="email" class="label">Email</label>
+                        <input type="email" id="email" name="email" class="input" [(ngModel)]="formData.email" required
+                            placeholder="you@company.com" [disabled]="status === 'sending'">
+                    </div>
+
+                    <div class="field">
+                        <label for="message" class="label">Message</label>
+                        <textarea id="message" name="message" class="textarea" [(ngModel)]="formData.message" required
+                            placeholder="Tell us about your project..." [disabled]="status === 'sending'"></textarea>
+                    </div>
+
+                    <div class="spacer-1"></div>
+
+                    <button type="submit" class="btn btn--primary" [disabled]="status === 'sending'">
+                        <span *ngIf="status === 'idle' || status === 'error'">Send Message</span>
+                        <span *ngIf="status === 'sending'">Sending...</span>
+                        <span *ngIf="status === 'success'">Message Sent!</span>
+
+                        <svg *ngIf="status === 'idle' || status === 'error'" xmlns="http://www.w3.org/2000/svg"
+                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+
+                    <div *ngIf="status === 'success'" class="alert alert--success">
+                        <div class="alert__title">Success</div>
+                        <div class="alert__body">Your message has been sent successfully.</div>
+                    </div>
+
+                    <div *ngIf="status === 'error'" class="alert alert--danger">
+                        <div class="alert__title">Error</div>
+                        <div class="alert__body">{{ errorMessage }}</div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="spacer-4"></div>
+    </div>
+</section>
